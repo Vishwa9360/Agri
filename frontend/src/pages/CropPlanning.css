@@ -1,0 +1,403 @@
+.crop-planning-page {
+  min-height: calc(100vh - 70px);
+  background: #f4f7f5;
+  padding: 30px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.crop-planning-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.crop-planning-header h1 {
+  font-size: 26px;
+  color: #1d3026;
+  margin-bottom: 6px;
+}
+
+.crop-planning-header p {
+  font-size: 13px;
+  color: #78837d;
+}
+
+.add-crop-btn {
+  background: #2f8f46;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  padding: 11px 18px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.add-crop-btn:hover {
+  background: #26783b;
+}
+
+/* =========================
+   SUMMARY CARDS
+========================= */
+
+.crop-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.crop-summary-card {
+  background: white;
+  border: 1px solid #e5ebe7;
+  border-radius: 11px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(30, 60, 40, 0.03);
+}
+
+.crop-summary-card span {
+  font-size: 12px;
+  color: #737e78;
+}
+
+.crop-summary-card h2 {
+  font-size: 25px;
+  color: #20372a;
+  margin: 12px 0 5px;
+}
+
+.crop-summary-card p {
+  font-size: 10px;
+  color: #909993;
+}
+
+/* =========================
+   MAIN PANEL
+========================= */
+
+.crop-panel {
+  background: white;
+  border: 1px solid #e5ebe7;
+  border-radius: 12px;
+  padding: 22px;
+}
+
+.crop-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.crop-panel-header h2 {
+  font-size: 17px;
+  color: #25372d;
+  margin-bottom: 5px;
+}
+
+.crop-panel-header p {
+  font-size: 11px;
+  color: #89928d;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.crop-search {
+  width: 240px;
+  height: 38px;
+  border: 1px solid #dfe6e1;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 10px;
+  color: #9aa49f;
+}
+
+.crop-search input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  background: transparent;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.crop-table {
+  width: 100%;
+}
+
+.crop-table-header,
+.crop-table-row {
+  display: grid;
+  grid-template-columns: 1.4fr 1.1fr 1fr 1.2fr 0.9fr 1fr;
+  align-items: center;
+  column-gap: 12px;
+}
+
+.crop-table-header {
+  background: #f7f9f8;
+  border-top: 1px solid #edf0ee;
+  border-bottom: 1px solid #edf0ee;
+  padding: 12px 10px;
+}
+
+.crop-table-header span {
+  font-size: 9px;
+  font-weight: 700;
+  color: #7b867f;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.crop-table-row {
+  padding: 16px 10px;
+  border-bottom: 1px solid #edf0ee;
+}
+
+.crop-table-row:last-child {
+  border-bottom: none;
+}
+
+.crop-table-row > span {
+  font-size: 12px;
+  color: #59665e;
+}
+
+.crop-table-row strong {
+  display: block;
+  font-size: 13px;
+  color: #263b2e;
+  margin-bottom: 3px;
+}
+
+.crop-table-row small {
+  font-size: 10px;
+  color: #9aa29d;
+}
+
+/* =========================
+   BADGES
+========================= */
+
+.season-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.season-badge.kharif {
+  background: #e7f5ea;
+  color: #287a3e;
+}
+
+.season-badge.rabi {
+  background: #fff4dc;
+  color: #b37b1e;
+}
+
+.season-badge.zaid {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+/* =========================
+   ACTIONS
+========================= */
+
+.crop-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.crop-actions button {
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 6px;
+  background: #edf6ef;
+  cursor: pointer;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.crop-actions button:hover {
+  background: #dceee0;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.crop-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.crop-modal {
+  width: 520px;
+  max-width: 90%;
+  background: white;
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.crop-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 22px;
+}
+
+.crop-modal-header h2 {
+  font-size: 20px;
+  color: #173b2c;
+  margin-bottom: 4px;
+}
+
+.crop-modal-header p {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.crop-form-group {
+  margin-bottom: 16px;
+}
+
+.crop-form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.crop-form-group input,
+.crop-form-group select {
+  width: 100%;
+  padding: 11px 13px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  font-size: 13px;
+  outline: none;
+  background: white;
+  box-sizing: border-box;
+}
+
+.crop-form-group input:focus,
+.crop-form-group select:focus {
+  border-color: #2f8f46;
+  box-shadow: 0 0 0 2px rgba(47, 143, 70, 0.1);
+}
+
+.crop-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.cancel-crop-btn,
+.save-crop-btn {
+  padding: 10px 18px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cancel-crop-btn {
+  background: white;
+  border: 1px solid #d1d5db;
+  color: #374151;
+}
+
+.cancel-crop-btn:hover {
+  background: #f3f4f6;
+}
+
+.save-crop-btn {
+  background: #2f8f46;
+  border: none;
+  color: white;
+}
+
+.save-crop-btn:hover {
+  background: #247438;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+  .crop-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .crop-table {
+    overflow-x: auto;
+  }
+  .crop-table-header,
+  .crop-table-row {
+    min-width: 750px;
+  }
+}
+
+@media (max-width: 650px) {
+  .crop-planning-page {
+    padding: 18px;
+  }
+  .crop-planning-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .crop-summary {
+    grid-template-columns: 1fr;
+  }
+  .crop-panel-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .crop-search {
+    width: 100%;
+  }
+  .crop-modal {
+    width: 95%;
+    padding: 20px;
+  }
+  .crop-form-actions {
+    flex-direction: column;
+  }
+  .cancel-crop-btn,
+  .save-crop-btn {
+    width: 100%;
+  }
+}

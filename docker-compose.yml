@@ -1,0 +1,60 @@
+version: '3.8'
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: smartfarming-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-root}
+      MYSQL_DATABASE: ${DB_NAME:-demo}
+    ports:
+      - "${DB_PORT:-3306}:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-proot"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - smartfarming-network
+  backend:
+    build:
+      context: ./demo
+      dockerfile: Dockerfile
+    container_name: smartfarming-backend
+    restart: on-failure
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      DB_HOST: mysql
+      DB_PORT: 3306
+      DB_NAME: ${DB_NAME:-demo}
+      DB_USERNAME: ${DB_USERNAME:-root}
+      DB_PASSWORD: ${DB_PASSWORD:-root}
+      JWT_SECRET: ${JWT_SECRET:-SmartFarmingProjectSecretKeyForJwtAuthentication2026With256BitsMinimum}
+    ports:
+      - "8080:8080"
+    networks:
+      - smartfarming-network
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: smartfarming-frontend
+    restart: on-failure
+    depends_on:
+      - backend
+    ports:
+      - "5173:80"
+    networks:
+      - smartfarming-network
+
+volumes:
+  mysql_data:
+    driver: local
+
+networks:
+  smartfarming-network:
+    driver: bridge

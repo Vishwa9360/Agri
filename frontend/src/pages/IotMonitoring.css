@@ -1,0 +1,432 @@
+.iot-page {
+  min-height: calc(100vh - 70px);
+  background: #f4f7f5;
+  padding: 30px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.iot-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.iot-header h1 {
+  font-size: 26px;
+  color: #1d3026;
+  margin-bottom: 6px;
+}
+
+.iot-header p {
+  font-size: 13px;
+  color: #78837d;
+}
+
+.add-sensor-btn {
+  background: #2f8f46;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  padding: 11px 18px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.add-sensor-btn:hover {
+  background: #26783b;
+}
+
+/* =========================
+   GAUGE / SUMMARY CARDS
+========================= */
+
+.iot-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.iot-metric-card {
+  background: white;
+  border: 1px solid #e5ebe7;
+  border-radius: 11px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(30, 60, 40, 0.03);
+}
+
+.iot-metric-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.iot-metric-top span {
+  font-size: 12px;
+  color: #737e78;
+}
+
+.iot-metric-badge {
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+  background: #e7f5ea;
+  color: #2f8f46;
+}
+
+.iot-metric-badge.warning {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.iot-metric-card h2 {
+  font-size: 26px;
+  color: #20372a;
+  margin: 12px 0 5px;
+}
+
+.iot-metric-card p {
+  font-size: 11px;
+  color: #909993;
+}
+
+/* =========================
+   MAIN SENSOR PANEL
+========================= */
+
+.iot-panel {
+  background: white;
+  border: 1px solid #e5ebe7;
+  border-radius: 12px;
+  padding: 22px;
+}
+
+.iot-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.iot-panel-header h2 {
+  font-size: 17px;
+  color: #25372d;
+  margin-bottom: 5px;
+}
+
+.iot-panel-header p {
+  font-size: 11px;
+  color: #89928d;
+}
+
+/* =========================
+   SEARCH & REFRESH
+========================= */
+
+.iot-search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.iot-search {
+  width: 240px;
+  height: 38px;
+  border: 1px solid #dfe6e1;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 10px;
+  color: #9aa49f;
+}
+
+.iot-search input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  background: transparent;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.iot-table {
+  width: 100%;
+}
+
+.iot-table-header,
+.iot-table-row {
+  display: grid;
+  grid-template-columns: 1.4fr 1.1fr 1fr 1fr 1fr 0.9fr 1fr;
+  align-items: center;
+  column-gap: 12px;
+}
+
+.iot-table-header {
+  background: #f7f9f8;
+  border-top: 1px solid #edf0ee;
+  border-bottom: 1px solid #edf0ee;
+  padding: 12px 10px;
+}
+
+.iot-table-header span {
+  font-size: 9px;
+  font-weight: 700;
+  color: #7b867f;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.iot-table-row {
+  padding: 16px 10px;
+  border-bottom: 1px solid #edf0ee;
+}
+
+.iot-table-row:last-child {
+  border-bottom: none;
+}
+
+.iot-table-row strong {
+  display: block;
+  font-size: 13px;
+  color: #263b2e;
+  margin-bottom: 3px;
+}
+
+.iot-table-row small {
+  font-size: 10px;
+  color: #9aa29d;
+}
+
+.iot-table-row > span {
+  font-size: 12px;
+  color: #59665e;
+}
+
+/* =========================
+   STATUS BADGES
+========================= */
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.status-badge.active {
+  background: #e7f5ea;
+  color: #287a3e;
+}
+
+.status-badge.offline {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+.status-badge.alert {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+/* =========================
+   ACTIONS
+========================= */
+
+.iot-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.iot-actions button {
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 6px;
+  background: #edf6ef;
+  cursor: pointer;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iot-actions button:hover {
+  background: #dceee0;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.iot-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.iot-modal {
+  width: 520px;
+  max-width: 90%;
+  background: white;
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.iot-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 22px;
+}
+
+.iot-modal-header h2 {
+  font-size: 20px;
+  color: #173b2c;
+  margin-bottom: 4px;
+}
+
+.iot-modal-header p {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.iot-form-group {
+  margin-bottom: 16px;
+}
+
+.iot-form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.iot-form-group input,
+.iot-form-group select {
+  width: 100%;
+  padding: 11px 13px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  font-size: 13px;
+  outline: none;
+  background: white;
+  box-sizing: border-box;
+}
+
+.iot-form-group input:focus,
+.iot-form-group select:focus {
+  border-color: #2f8f46;
+  box-shadow: 0 0 0 2px rgba(47, 143, 70, 0.1);
+}
+
+.iot-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.cancel-sensor-btn,
+.save-sensor-btn {
+  padding: 10px 18px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cancel-sensor-btn {
+  background: white;
+  border: 1px solid #d1d5db;
+  color: #374151;
+}
+
+.cancel-sensor-btn:hover {
+  background: #f3f4f6;
+}
+
+.save-sensor-btn {
+  background: #2f8f46;
+  border: none;
+  color: white;
+}
+
+.save-sensor-btn:hover {
+  background: #247438;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+  .iot-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .iot-table {
+    overflow-x: auto;
+  }
+  .iot-table-header,
+  .iot-table-row {
+    min-width: 780px;
+  }
+}
+
+@media (max-width: 650px) {
+  .iot-page {
+    padding: 18px;
+  }
+  .iot-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .iot-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+  .iot-panel-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .iot-search-bar {
+    width: 100%;
+  }
+  .iot-search {
+    width: 100%;
+  }
+  .iot-modal {
+    width: 95%;
+    padding: 20px;
+  }
+  .iot-form-actions {
+    flex-direction: column;
+  }
+  .cancel-sensor-btn,
+  .save-sensor-btn {
+    width: 100%;
+  }
+}
